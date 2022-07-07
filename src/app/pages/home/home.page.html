@@ -6,8 +6,15 @@
 
 <ion-content>
 
+  <ion-list>
+    <ion-item *ngFor="let c of componentes" [routerLink]="c.redirecTo" detail>
+      <ion-icon [name]="c.icon" slot="start"></ion-icon>
+      {{c.name}}
+    </ion-item>
+  </ion-list>
+
   <ion-button routerLink="/alert">Alert</ion-button>
   <ion-button routerLink="/about">About</ion-button>
 
-  
+
 </ion-content>
